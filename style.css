@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease-in-out;
+  background: #01c9f4;
+
+ 
+}
+.sun::before{
+  content: "\2600";
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  top: 10%;
+  color: #fbd259;
+  transition: all 1s ease-in-out;
+  font-size: 8rem;
+  z-index: 999;
+  animation-name: animi;
+  animation-duration: 1s;
+
+}
+
+.label{
+  width: 100px;
+  height: 40px;
+  display: inline-block;
+  border: 4px solid rgb(255 255 255);
+  border-radius: 50px;
+  position:relative;
+  cursor: pointer;
+}
+/*hide checkbox*/
+.checkbox{
+  display: none;
+}
+/*checkbox style*/
+.span{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #2c3e50;  
+  border-radius: 50%;
+  margin: 5px;
+  left: 0;
+  transition: all ease 0.5s;
+  position: absolute;
+}
+/*check our checkbox to change position */
+.label .checkbox:checked ~ .span{
+left: 60px;
+}
+.daybackground::after{
+  content: "\f186";
+  font-family: 'Font Awesome\ 5 Free';
+  position: absolute;
+  top: 15%;
+  font-size: 5rem;
+  color: #ffffff;
+  transition: all 1s ease-in-out;
+  z-index: 999;
+  animation-name: animi;
+  animation-duration: 1s;
+  transform: none!important;
+
+}
+.daybackground .label{
+  background-color: #2c3e50;
+}
+.daybackground span{
+  background: #ffffff;
+}
+.daybackground{
+  background: #131836;
+  transition: all 1s ease-in-out;
+}
+
+/*start animation*/
+@keyframes animi{
+0%{
+margin: -14%;
+}
+
+100%{
+  margin-top: 0%;
+  transform: rotate(360deg)
+}
+}
+
+
+/*end animation*/
